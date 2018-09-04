@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cash Flow</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Work+Sans" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+    </head>
+    <body>
+        <div class="summary">
+            <div id="sender"></div>
+            <div id="pay-prompt"></div>
+            <div id="receiver"></div>
+            <div id="amount"></div>
+        </div>
+        <div class="block">
+            <div class="line">
+                User  
+                <div class="dropdown">
+                    <div class="select">
+                        <span>- Select -</span>
+                    </div>
+                    <input type="hidden" name="input-user">
+                    <ul class="dropdown-menu">
+                        <li id="Vincent">Vincent</li>
+                        <li id="Cecilia">Cecilia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line">
+                Date
+                <input type="text" name="input-date" pattern="[0-9]+">
+            </div>
+            <div class="line">
+                Amount ($)
+                <input type="text" name="input-amount" placeholder="100" pattern="[0-9]+">
+            </div>
+            <div class="line">
+                Purpose
+                <input type="text" name="input-purpose" placeholder="LADWP, Ralphs, Target, . . ." style="width: 700px">
+            </div>
+            <div class="line">
+                <input type="checkbox" id="cb" />
+                <label for="cb">Pay between each other</label>
+            </div>
+            <button id="add">Add</button>
+            <div id="input-validation-msg"></div>
+        </div>
+        <button id="refresh">Refresh</button>
+        <table id="cashflow"></table>
+
+        <script type="text/javascript" src="app.js"></script>        
+    </body>
+</html>

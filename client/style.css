@@ -1,0 +1,314 @@
+body,
+input,
+button {
+    font-family: "Work Sans", Times, serif;
+    font-size: 21px;
+}
+
+body { 
+    margin: auto;
+    margin-bottom: 100px;
+    position: relative;
+    width: 1000px;
+}
+
+.summary {
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+
+#sender,
+#pay-prompt,
+#receiver {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    line-height: 100px;
+}
+
+#sender,
+#receiver {
+    width: 40%;
+    font-size: 40px;
+}
+
+#receiver {
+    left: 60%;
+}
+
+#pay-prompt {
+    width: 20%;
+    left: 40%;
+    font-size: 60px;
+}
+
+#amount {
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Arial Unicode MS", sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+    position: absolute;
+    line-height: 200px;
+}
+
+
+
+
+
+
+
+
+
+.block {
+    height: 332px;
+    border: 2px solid #555555;
+    border-radius: 50px;
+    padding: 60px;
+    margin-top: 60px;
+}
+
+
+.line {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* Styling Selectbox start */
+.dropdown {
+    outline: 0;
+    width: 180px;
+    height: 100%;
+    left: 80px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #000;
+    transition: all .5s ease;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+
+.dropdown .select > i {
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+
+.dropdown:hover {
+    box-shadow: 0 0 6px #000;
+}
+
+.dropdown:active {
+    background-color: #f8f8f8
+}
+
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 6px #000;
+    border-radius: 5px 5px 0 0;
+    background-color: #f8f8f8
+}
+
+.dropdown.active .select > i {
+    transform: rotate(-90deg)
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 0 3px #000;
+    border-radius: 0 1px 5px 5px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+}
+
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+/* Styling Selectbox end */
+
+
+
+
+
+
+
+
+input {
+    width: 170px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    position: absolute;
+    left: 200px;
+    text-align: center;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0.4; /* Firefox */
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px
+}
+
+button:hover {
+    background-color: #dddddd;
+    /* color: white; */
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+#add {
+    margin-top: 15px;
+}
+
+#refresh {
+    margin: 50px 0 20px 60px;
+}
+
+#input-validation-msg {
+    display: inline-block;
+    margin-left: 100px;
+    color: red;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  padding-left: 36px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  z-index: -1;
+}
+input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+input[type="checkbox"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #888;
+}
+/* Transition */
+label,
+label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+
+
+
+
+
+/* -------------------- */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-icon {
+    cursor: pointer;
+    margin: 10px;
+}
